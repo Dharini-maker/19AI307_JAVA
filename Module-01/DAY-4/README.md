@@ -1,35 +1,68 @@
-# Ex.No:1(D) USER DEFINED METHOD.
+# Ex.No:1(D) ARRAYS
+
+## QUESTION:
+Write a Java program to find the index of a given element in an array.
 
 ## AIM:
-To create a Java program print area of rectangle by defining instance method and local variable value as 10,20 .[Class Name is ‘Area’ function name is ‘calculateArea()’ and return type of function is ’void’
+To write a Java program that finds the index position of a specified element from a given array.
 
 ## ALGORITHM :
 1.	Start the program.
-2.	Define a class named 'Area'
-3.	Declare a public method named 'calculateArea' with no parameters
-4.	Inside the 'calculateArea' method:
-a)	Declare a Double variable 'length' and assign it the value 10.0
-b)	Declare a Double variable 'width' and assign it the value 20.0
-c)	Calculate the area by multiplying 'length' and 'width' and store the result in a Double variable 'area'
-d)	Print the calculated area using the System.out.println statement
-5.	Define the 'main' method as static
-6.	Inside the 'main' method:
-a)	Create an instance of the 'Area' class called 'rectangle'
-b)	Call the 'calculateArea' method on the 'rectangle' object
-
-
-
+2.	Import the necessary package 'java.util'
+3.	Read the size of the array from the user.
+4. Create an array of the given size.
+5. Read the array elements from the user and store them in the array.
+6. Read the element to be searched.
+7. Traverse the array and compare each element with the search element.
+8. If matched, print the index position and terminate.
+9. If not found, display "Element not found".
+10. Stop the program.
 
 ## PROGRAM:
  ```
 /*
-Program to implement a User Defined Method using Java
-Developed by: 
-RegisterNumber:  
+Program to implement a Array concept using Java
+Developed by:  Dharini.S
+RegisterNumber: 212224040072
 */
 ```
 
-## Sourcecode.java:
+## SOURCE CODE:
+```
+import java.util.*;
+public class Main
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int[] arr=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        int key=sc.nextInt();
+        int index=-1;
+        for(int i=0;i<n;i++)
+        {
+            if(arr[i]==key)
+            {
+                index=i;
+                break;
+            }
+        }
+        
+        if(index!=-1)
+        {
+            
+            System.out.println(index);
+        }
+        else{
+            System.out.println("Element not found");
+        }
+    }
+}
+```
 
 
 
@@ -38,9 +71,10 @@ RegisterNumber:
 
 
 ## OUTPUT:
-
-
+![OUTPUT](https://github.com/ABINAYA-27-76/19AI307_ODD-25-26-/blob/89cca4a56df2cfb4774052b6ca0e2fe103f4875f/19AI307_JAVA(25-26)/Module-01/DAY-4/output.jpg)
 
 ## RESULT:
-Thus, the Java program to print area of rectangle by defining instance method and local variable value as 10,20 was created successfully.
+
+Thus, the Java program to find the index of a given element in an array was successfully executed.
+
 
